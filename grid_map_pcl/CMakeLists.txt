@@ -22,6 +22,12 @@ set(CATKIN_PACKAGE_DEPENDENCIES
   roscpp
 )
 
+## Find catkin macros and libraries
+find_package(catkin REQUIRED
+  COMPONENTS
+    ${CATKIN_PACKAGE_DEPENDENCIES}
+)
+
 find_package(OpenMP QUIET)
 if (OpenMP_FOUND)
   add_compile_options("${OpenMP_CXX_FLAGS}")
@@ -37,12 +43,6 @@ find_package(PCL REQUIRED
     kdtree
     segmentation
     surface
-)
-
-## Find catkin macros and libraries
-find_package(catkin REQUIRED 
-  COMPONENTS
-    ${CATKIN_PACKAGE_DEPENDENCIES}
 )
 
 ###################################
