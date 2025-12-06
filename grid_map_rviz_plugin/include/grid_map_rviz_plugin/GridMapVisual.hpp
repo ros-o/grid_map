@@ -14,13 +14,6 @@
 #include <grid_map_msgs/GridMap.h>
 #include <grid_map_core/GridMap.hpp>
 
-namespace Ogre {
-class Vector3;
-class Quaternion;
-class ManualObject;
-class ColourValue;
-}  // namespace Ogre
-
 namespace rviz {
 class BillboardLine;
 }
